@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    height: 80vh;
+}
+
+.site-title { 
+    color: #f4f4f4; 
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.title{
+    color: #f4f4f4;
+    padding-left: 2%;
+}
+
+.header-image {
+    background-image:url(/IMG/fondo.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 15%;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    position: relative; 
+    top: 100%; 
+    transform: translateY(-100%);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.menu a {
+    padding: 1rem;
+    text-align: center; 
+    
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+/*habilidades*/
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    gap: 2rem;
+}
+
+.skill {
+    text-align: center;
+    flex: 1 1 150px;
+}
+
+.skill img {
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
+}
+
+
+/* acerca de mi */
+
+.about-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.experience-list, .personal-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-list li, .personal-info li {
+    margin-bottom: 1rem;
+}
+
+.experience-list h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.experience-list p {
+    margin: 0.5rem 0;
+    color: #777;
+}
+
+.personal-info li {
+    font-size: 1rem;
+    color: #555;
+}
+
+.personal-info strong {
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        justify-content: space-between; 
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        margin: 0; 
+    }
+
+    .menu a {
+        padding: 1rem;
+        border-top: 1px solid #ccc;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .site-title {
+        flex: 1; 
+        text-align: left; 
+    }
+
+
+    /*habilidades*/
+    .skills-container {
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .skill {
+        flex: 0 0 auto; 
+        margin-right: 1rem; 
+    }
+
+
+    /*acerca de mi */
+    .about-section {
+        padding: 0.5rem;
+    }
+
+    .experience-list h4, .personal-info li {
+        font-size: 1rem;
+    }
+
+    .experience-list p {
+        font-size: 0.9rem;
+    }
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
