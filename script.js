@@ -1,10 +1,10 @@
 
-(function(){
+(function () {
     emailjs.init('c_NpVJL7oxTxHyc1d');
 })();
 
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const serviceID = 'service_5m5nnen'; // Reemplaza con tu serviceID de Gmail
@@ -38,6 +38,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         });
 });
 
-document.querySelector('.menu-toggle').addEventListener('click', function() {
+document.querySelector('.menu-toggle').addEventListener('click', function () {
     document.querySelector('.menu').classList.toggle('active');
 });
+

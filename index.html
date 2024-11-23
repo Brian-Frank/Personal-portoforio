@@ -5,88 +5,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Frank</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-    <header>
-        <div class="header-image"></div>
+    <!-- Header -->
+    <header class="header-image">
         <div class="header-content">
-            <h1 class="title">Brian Frank</h1>
-            <nav>
-                <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-                <div class="menu">
-                    <a href="#acerca-de-mi">Acerca de Mí</a>
-                    <a href="#habilidades">Habilidades</a>
-                    <a href="#contacto">Contacto</a>
-                    <a href="https://www.linkedin.com/in/frankbrian/" target="_blank">LinkedIn</a>
-                </div>
-            </nav>
+            <h1 class="header-title">¡Bienvenido a Mi Portafolio!</h1>
+            <p class="header-subtitle">Soy un Desarrollador Front-end apasionado por la tecnología</p>
         </div>
     </header>
 
-    <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#acerca-de-mi">Acerca de Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/frankbrian/"
+                            target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
         <section id="acerca-de-mi">
             <h2>Acerca de mí</h2>
-
             <div class="about-section">
-                <h3>Sobre Mí</h3>
-                <p>Descrip.</p>
+                <p>
+                    Soy un desarrollador front-end apasionado por la tecnología y la innovación, con experiencia tanto
+                    en proyectos
+                    independientes como en roles corporativos. Actualmente, me desempeño como <strong>Analista
+                        Programador en
+                        Veritran</strong>, donde desarrollo de soluciones utilizando lenguajes como
+                    <strong>JavaScript</strong> y <strong>C++</strong> a traves de una plataforma low-code propia de
+                    Veritran.
+                </p>
+                <p>
+                    Complemento mi experiencia profesional con una formación académica, estoy en mi
+                    tercer año de
+                    <strong>Licenciatura en Sistemas</strong> en la Universidad Católica de La Plata (UCALP), y me
+                    gradué como
+                    <strong>Desarrollador Front-end</strong> en Coderhouse, donde completé los cursos de
+                    <strong>Desarrollo
+                        Web</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, y <strong>React</strong>.
+                </p>
+                <p>
+                    En Coderhouse, aprendí a construir aplicaciones web modernas, implementar diseños responsivos y
+                    trabajar con
+                    herramientas clave como <strong>Git</strong>, <strong>APIs/strong>, y librerías como
+                        <strong>React</strong>.
+                </p>
+                <p>
+                    Me considero una persona proactiva, sociable y adaptable, capaz de integrarme rápidamente en equipos
+                    diversos.
+                    Mi objetivo profesional es continuar creciendo en el mundo de la tecnología, participando en
+                    proyectos
+                    desafiantes que generen impacto y aporten valor.
+                </p>
             </div>
 
-            <div class="about-section">
-                <h3>Experiencia Profesional</h3>
-                <ul class="experience-list">
-                    <li>
-                        <h4>Desarrollador freelance</h4>
-                        <p>Enero 2020 - Mayo 2022</p>
-                        <p>Descripción .</p>
-                    </li>
-                    <li>
-                        <h4>Desarrollador Web y Mobile en Veritran</h4>
-                        <p>Mayo 2022 - Presente</p>
-                        <p>Descripción .</p>
-                    </li>
 
-                </ul>
-            </div>
-
-            <div class="about-section">
-                <h3>Datos Personales</h3>
-                <ul class="personal-info">
-                    <li><strong>Nombre:</strong> Brian Alejandro Frank</li>
-                    <li><strong>Correo Electrónico:</strong> brianfrank93@gmail.com</li>
-                    <li><strong>Ubicación:</strong> Buenos Aires, La Plata</li>
-                </ul>
-            </div>
-
-        </section>
-
-        <section id="otro">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="...">
+            <!-- Experience Section -->
+            <section id="experiencia">
+                <h2>Mi Experiencia Profesional</h2>
+                <div class="experiencia-grid">
+                    <div class="experiencia-card">
+                        <div class="card-header">
+                            <h3>Vendedor en Levis</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="role">
+                                <p><strong>Rol:</strong> Vendedor</p>
+                                <p><strong>Duración:</strong> ene. 2017 - dic. 2022 · 5 años</p>
+                                <p><strong>Ubicación:</strong> Local en Buenos Aires - La Plata</p>
+                                <p>Durante mi tiempo en Levis, desempeñé el rol de atención al cliente</p>
+                                <ul>
+                                    <li>Asesorar a clientes en la compra de ropa y productos de la marca, logrando
+                                        objetivos de ventas
+                                        mensuales.</li>
+                                    <li>Gestionar inventarios y realizar auditorías para mantener el stock actualizado.
+                                    </li>
+                                    <li>Brindar mantenimiento y soporte a las computadoras del local, resolviendo
+                                        problemas técnicos y
+                                        mejorando la eficiencia de los sistemas.</li>
+                                </ul>
+                                <p>Esta experiencia me permitió desarrollar habilidades personales, trabajar en
+                                    equipo y aprender sobre
+                                    la importancia de la tecnología en la gestión de un negocio.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                    <div class="experiencia-card">
+                        <div class="card-header">
+                            <h3>Paginas web en Coderhouse</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="role">
+                                <p><strong>Rol:</strong> Estudiante de Desarrollo Web</p>
+                                <p><strong>Duración:</strong> ene. 2020 - dic. 2021</p>
+                                <p><strong>Ubicación:</strong> Remoto</p>
+                                <p>Durante mi formación en <strong>Coderhouse</strong>, adquirí conocimientos en
+                                    herramientas y
+                                    tecnologías clave para el desarrollo web. Los proyectos realizados en los cursos me
+                                    permitieron:</p>
+                                <ul>
+                                    <li>Desarrollar sitios web responsivos utilizando <strong>HTML</strong>,
+                                        <strong>CSS</strong> y
+                                        <strong>JavaScript</strong>.
+                                    </li>
+                                    <li>Trabajar con librerías modernas como <strong>React</strong> para crear
+                                        interfaces interactivas y
+                                        dinámicas.</li>
+                                    <li>Integrar APIs RESTful para manejar datos en tiempo real y mejorar la
+                                        funcionalidad de las
+                                        aplicaciones.</li>
+                                    <li>Aprender principios de diseño UI/UX y aplicarlos para mejorar la experiencia del
+                                        usuario en los
+                                        proyectos.</li>
+                                    <li>Colaborar en entornos simulados de trabajo en equipo, utilizando herramientas
+                                        como
+                                        <strong>Git</strong> y <strong>GitHub</strong> para control de versiones.
+                                    </li>
+                                </ul>
+                                <p>Estos cursos no solo me proporcionaron habilidades técnicas, sino también la
+                                    capacidad de gestionar
+                                    proyectos y adaptarme a nuevas tecnologías rápidamente, lo que fortaleció mi perfil
+                                    profesional.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+
+
+                    <div class="experiencia-card">
+                        <div class="card-header">
+                            <h3>Veritran</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="role">
+                                <h4>Business Solution Implementer</h4>
+                                <p><strong>Duración:</strong> may. 2022 - ene. 2023 · 9 meses</p>
+                                <p><strong>Ubicación:</strong> Argentina</p>
+                            </div>
+                            <hr class="divider">
+                            <div class="role">
+                                <h4>Analyst Programmer</h4>
+                                <p><strong>Duración:</strong> ene. 2023 - actualidad</p>
+                                <p><strong>Ubicación:</strong> Provincia de Buenos Aires, Argentina · Hibrido</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+
+            </section>
+
         </section>
 
+        <!-- Skills Section -->
         <section id="habilidades">
-            <h2>Habilidades: </h2>
+            <h2>Habilidades</h2>
             <div class="skills-container">
                 <div class="skill">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
@@ -122,34 +219,38 @@
             </div>
         </section>
 
+
+        <!-- Contact Section -->
         <section id="contacto">
             <h2>Contacto</h2>
-            <p>Si te gustaria hablar conmigo, contactame.</p>
+            <p>Si te gustaría hablar conmigo, contáctame.</p>
             <form id="contact-form">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="from_name" required>
-
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="from_email" required>
-
                 <label for="message">Mensaje:</label>
                 <textarea id="message" name="message" required></textarea>
-
-                <div class="g-recaptcha" data-sitekey="key de captcha"></div>
-
+                <div class="g-recaptcha" data-sitekey="key-de-captcha"></div>
                 <button id="button" type="submit">Enviar</button>
             </form>
         </section>
-    </div>
+    </main>
+    </main>
 
 
+
+    <!-- Footer -->
     <footer>
         <p>© 2024 Brian Frank. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js" src="captcha.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="captcha.js"></script>
 </body>
 
 </html>
